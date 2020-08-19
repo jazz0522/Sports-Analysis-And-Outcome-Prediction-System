@@ -1,0 +1,453 @@
+<html>
+<head><title>Cricket Predict Now
+</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<style>
+
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-shadow:2px 2px red;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 8;
+  padding: 0;
+  width: 10%;
+  background-color: #4CAF50;
+  position: fixed;
+  height: 63%;
+
+}
+
+li a {
+  display: block;
+  color: #4CAF50;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+<table>
+<tr>
+<td width="10%"><img src="static/logo_transparent101.png" style="width:100%"></td>
+<td><center><h1><font size="7" color="white">CRICKET</font><img src="static/cktpglogo.png" alt="Avatar" style="width:12%"></h1></center></td>
+</tr>
+</table>
+
+<ul>
+  <li align="center"><a class="active" href="http://127.0.0.1:5000/ckt_dashboard"><font size="5" color="white" style="bold"><center>Dashboard</center></font></a></li>
+  <li><a href="http://127.0.0.1:5000/ckt_news"><font size="5" color="white" style="bold"><center>News</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ckt_rankings"><font size="5" color="white" style="bold"><center>Rankings</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ckt_videos"><font size="5" color="white" style="bold" align="center"><center>Videos</center></a></ii>
+  <li><a href="http://127.0.0.1:5000/ckt_schedule"><font size="5" color="white" style="bold"><center>Schedule</center></a></li>
+</ul>
+<div style="margin-left: 13%;width:85%; height:275px;">
+<right>Match Prediction:</right>
+
+<!--<form name="predform" action="E:\Sem8\project\saheel\Proj\Result.html" onsubmit="return predform()" method="post">-->
+<form action="http://127.0.0.1:5000/ckt_output" method="POST">
+<table width="100%" height="130%">
+<tr width="100%">
+<td align="right" width="20%">
+        <label for="teama" align="center"><font color="white" size="5">Team A</font></label>
+</td>
+<td align="left" width="30%">
+          <select id="Ateam" name="TeamA">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="1">Kolkata</option>
+          <option value="2">Bangalore</option>
+          <option value="3">Chennai</option>
+          <option value="4">Punjab</option>
+          <option value="5">Rajasthan</option>
+          <option value="6">Delhi</option>
+          <option value="7">Mumbai</option>
+
+ 
+          <option value="11">Hyderabad</option>
+
+        </select>
+</td>
+
+<td align="right" width="20%">
+        <label for="teamb" align="center"><font color="white" size="5">Team B</font></label>
+</td>
+<td align="left" width="30%">
+          <select id="Bteam" name="TeamB">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="1">Kolkata</option>
+          <option value="2">Bangalore</option>
+          <option value="3">Chennai</option>
+          <option value="4">Punjab</option>
+          <option value="5">Rajasthan</option>
+          <option value="6">Delhi</option>
+          <option value="7">Mumbai</option>
+
+
+          <option value="11">Hyderabad</option>
+
+        </select>
+</td>
+</tr>
+
+
+
+<tr>
+
+<td align="right" width="20%">
+<label for="con" align="center"><font color="white" size="5">Conditions</font></label>
+</td>
+<td align="left" width="30%">
+          <select id="toss" name="condt">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="1">Day Match</option>
+          <option value="-1">Night Match</option>
+        </select>
+</td>
+<td align="right" width="20%">  
+<label for="toss" align="center"><font color="white" size="5">Toss</font></label>
+</td>
+<td align="left" width="30%">
+          <select id="tossID" name="tosswin">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="0">Team A</option>
+          <option value="1">Team B</option>
+        </select>
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right" width="20%"><label for="Season" align="center"><font color="white" size="5">HAS</font></label></td>
+<td align="left" width="30%"><input type="text" name="has" placeholder="Enter value" id="has_val"></td>
+<td align="right" width="20%"><label for="Season" align="center"><font color="white" size="5">HDS</font></label></td>
+<td align="left" width="30%"><input type="text" name="hds" placeholder="Enter value" id="hds_val"></td>
+
+</tr>
+
+
+<tr>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal01" style="width:10% height:10%">View HAS values</button>
+
+  <div class="modal fade" id="myModal01">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Home Attack Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  Bangalore<br>
+                  Chennai<br>
+                  Delhi<br>
+                  Hyderabad<br>
+                  Kolkata<br>
+                  Mumbai<br>
+                  Punjab<br>
+                  Rajasthan<br>
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  1.033679<br>
+                  0.953514<br>
+                  0.920600<br>
+                  0.942353<br>
+                  0.864468<br>
+                  0.875874<br>
+                  0.909602<br>
+                  0.645724<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal02" style="width:10% height:10%">View HDS values</button>
+
+  <div class="modal fade" id="myModal02">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Home Defence Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  Bangalore<br>
+                  Chennai<br>
+                  Delhi<br>
+                  Hyderabad<br>
+                  Kolkata<br>
+                  Mumbai<br>
+                  Punjab<br>
+                  Rajasthan<br>
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  1.058254<br>
+                  0.906217<br>
+                  0.927596<br>
+                  0.929652<br>
+                  0.858855<br>
+                  0.883687<br>
+                  0.915591<br>
+                  0.631910<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+
+</tr>
+
+
+<tr>
+<td align="right" width="20%">   
+<label for="Season" align="center"><font class="abc" color="white" size="5">AAS</font></label>
+</td>
+<td align="left" width="30%">
+<input type="text" name="aas" placeholder="Enter value" id="aas_val">
+</td>
+<td align="right" width="20%">    
+<label for="Season" align="center"><font color="white" size="5">ADS</font></label>
+</td>
+<td align="left" width="30%">
+<input type="text" name="ads" placeholder="Enter value" id="ads_val">
+</td>
+</tr>
+
+
+
+<tr>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal03" style="width:10% height:10%">View AAS values</button>
+
+  <div class="modal fade" id="myModal03">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Away Attack Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  Bangalore<br>
+                  Chennai<br>
+                  Delhi<br>
+                  Hyderabad<br>
+                  Kolkata<br>
+                  Mumbai<br>
+                  Punjab<br>
+                  Rajasthan<br>
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  0.825060<br>
+                  0.744067<br>
+                  0.868064<br>
+                  0.981454<br>
+                  0.970107<br>
+                  1.044029<br>
+                  0.933105<br>
+                  0.789538<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal04" style="width:10% height:10%">View ADS values</button>
+
+  <div class="modal fade" id="myModal04">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Away Defence Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  Bangalore<br>
+                  Chennai<br>
+                  Delhi<br>
+                  Hyderabad<br>
+                  Kolkata<br>
+                  Mumbai<br>
+                  Punjab<br>
+                  Rajasthan<br>
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  0.851841<br>
+                  0.714321<br>
+                  0.872045<br>
+                  0.98382<br>
+                  0.97657<br>
+                  0.998322<br>
+                  0.965979<br>
+                  0.784303<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+
+</tr>
+<td align="center" height="20%" colspan="4">
+<center>
+        <label for="algorithm" align="center"><font color="white" size="5">Algorithm</font></label>
+
+          <select id="Algorithm" name="Algorithm" width="50%">
+          <option value="" selected disabled hidden>Choose here</option>
+          
+          <option value="2">RandomForest</option>
+          <option value="1">KNN</option>   
+          </select>
+</center>
+</td>
+
+
+<tr>
+
+</tr>
+
+</table>
+      <input type="submit" name="Predict" class="btn btn-primary">
+      </form>
+      <br>
+<font size="4" color="white" face="Garamond">HAS: Home Attack Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDS: Home Defence Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAS: Away Attack Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADS: Away Defence Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</body>
+</html>

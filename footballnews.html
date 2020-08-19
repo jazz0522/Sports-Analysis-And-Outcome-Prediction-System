@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>Football News</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+<style>
+
+@import url("maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+.card .card-image{
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+.card{
+    margin-top: 10px;
+    position: relative;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 4 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card .card-content {
+    padding: 10px;    
+}
+
+.card .card-content .card-title, .card-reveal .card-title{
+    font-size: 24px;
+    font-weight: 200;    
+}
+
+.card .card-action{
+    padding: 20px;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+}
+.card .card-action a{
+    font-size: 15px;
+    color: #ffab40;
+    text-transform:uppercase;
+    margin-right: 20px;    
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+.card .card-action a:hover{    
+    color:#ffd8a6;
+    text-decoration:none;
+}
+
+.card .card-reveal{    
+    padding: 20px;
+    position: absolute;
+    background-color: #FFF;
+    width: 100%;
+    overflow-y: auto;
+    /*top: 0;*/
+    left:0;
+    bottom:0;
+    height: 100%;
+    z-index: 1;
+    display: none;    
+}
+
+.card .card-reveal p{
+    color: rgba(0, 0, 0, 0.71);
+    margin:20px ;
+}
+
+.btn-custom{
+    background-color: transparent;
+    font-size:18px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-shadow:3px 3px blue;
+}
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat:;
+  background-size: 100% 250%;
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-height: 800px;
+
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 8;
+  padding: 0;
+  width: 10%;
+  background-color: #4CAF50;
+  position: fixed;
+  height: 63%;
+
+}
+
+li a {
+  display: block;
+  color: #4CAF50;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td width="10%"><img src="static/logo_transparent101.png" style="width:100%"></td>
+<td><center><h1><font size="10" color="white">FOOTBALL&nbsp;&nbsp;</font><img src="static/f004.png" style="width:5%"></h1></center></td>
+</tr>
+</table>
+
+<ul>
+
+  <li align="center"><a class="active" href="http://127.0.0.1:5000/ftbl_dashboard"><font size="5" color="white" style="bold"><center>Dashboard</center></font></a></li>
+  <li><a href="http://127.0.0.1:5000/footballnews"><font size="5" color="white" style="bold"><center>News</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_ranking"><font size="5" color="white" style="bold"><center>Rankings</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_videos"><font size="5" color="white" style="bold" align="center"><center>Videos</center></a></ii>
+  <li><a href="http://127.0.0.1:5000/ftbl_schedule"><font size="5" color="white" style="bold"><center>Schedule</center></a></li>
+
+
+</ul>
+
+<right style="margin-left:10%">&nbsp;&nbsp;&nbsp;&nbsp;News:</right>
+<div style="margin-left:10%;padding:1px 16px;width:85%;height:300px;">
+
+<table align="center" style="length:75% width=100%" cellspacing="5">
+<tr width="100%">
+  <td  width="50%" align="center">  
+		<a href="https://livescore.football365.com/england-premier-league-liverpool-vs-huddersfield-town/26-04-2019/665623#report">
+		
+  			<img src="static/newsimage.jpg" alt="Avatar" height="230" width="500">
+			<div class="container">
+    			<font size="5" color="White" style="bold">Liverpool 5-0 Huddersfield : 91 bloody point!</font>
+  			</div>
+	
+		</a>
+</tr>
+</table>
+
+<table align="center" style="length:100% width=100%" cellspacing="10">
+<tr width="100%">
+	<td align="left" cellspacing="40">
+		<p>
+    <img src="static/neymar.jpg" alt="Avatar" height="150" width="250" align="left"><font size="5" color="white">Neymar on Hazard ambition: ‘We would cause havoc together!'     </font></br>
+              <a href="https://www.football365.com/news/neymar-on-hazard-ambition-we-would-cause-havoc-together" ><font color="white" size="3"> Click on link to read more.</font></a>
+		</p>
+
+	</td>
+	<td align="left" cellspacing="40">
+		<p>
+			<img src="static/man.jpg" alt="Avatar" height="150" width="250" align="left"><font size="5" color="white">Title Decider!</font></br><a href="https://www.football365.com/news/big-weekend-man-united-v-chelsea-vardy-tottenham-hughton"><font color="white" size="3">Click on the link to read more.</font>
+			</a>
+		</p>
+
+	</td>
+</tr>
+<tr width="100%">
+	<td align="left" cellspacing="40">
+		<p>
+<img src="static/salaFather.jpg" alt="Avatar" height="150" width="250" align="left"><font size="5" color="white">Sala’s father dies only 3 months after son is killed</font></a></br>
+      <a href="https://www.football365.com/news/salas-father-dies-only-3-months-after-son-is-killed">
+      <font color="white" size="3">Click on the link to read more.</font>
+      </a>
+		</p>
+
+	</td>
+	<td align="left" cellspacing="40">
+		<p>
+    <img src="static/chelsea.jpg" alt="Avatar" height="150" width="250" align="left"><font color="white" size="5">Chelsea to strike €100m Coutinho deal ‘if they overturn ban’</font></a></br>
+      <a href="https://www.football365.com/news/chelsea-to-strike-e100m-coutinho-deal-if-they-overturn-ban">
+            <font color="white" size="3">Click on the link to read more.</font>
+      </a>
+		</p>
+
+	</td>
+</tr>
+
+</table>
+</div>
+
+
+</div>
+</body>
+</html>

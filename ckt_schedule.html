@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>Cricket Schedule</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+<style>
+
+.button {
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+body {
+  margin: 0;
+}
+
+
+h1 {
+  text-shadow:2px 2px red;
+}
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 8;
+  padding: 0;
+  width: 10%;
+  background-color: #4CAF50;
+  position: fixed;
+  height: 63%;
+
+}
+
+li a {
+  display: block;
+  color: #4CAF50;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td width="10%"><img src="static/logo_transparent101.png" style="width:100%"></td>
+<td><center><h1><font size="7" color="white">CRICKET</font><img src="static/cktpglogo.png" style="width:12%"></h1></center></td>
+</tr>
+</table>
+
+<ul>
+  <li align="center"><a class="active" href="http://127.0.0.1:5000/ckt_dashboard"><font size="5" color="white" style="bold"><center>Dashboard</center></font></a></li>
+  <li><a href="http://127.0.0.1:5000/ckt_news"><font size="5" color="white" style="bold"><center>News</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ckt_rankings"><font size="5" color="white" style="bold"><center>Rankings</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ckt_videos"><font size="5" color="white" style="bold" align="center"><center>Videos</center></a></ii>
+  <li><a href="http://127.0.0.1:5000/ckt_schedule"><font size="5" color="white" style="bold"><center>Schedule</center></a></li>
+</ul>
+
+<right style="margin-left:10%">&nbsp;&nbsp;&nbsp;&nbsp;Schedule: Remaining Matches</right>
+<div style="margin-left:10%;padding:1px 16px;width:85%;height:300px;">
+<br>
+<table width="105%" height="100%" border="1">
+<tr width="100%">
+<td width="10%"><font size="5" color="white">Match No.</font></td>
+<td width="22%"><font size="5" color="white">Date, Day</font></td>
+<td width="13%" align="center"><font size="5" color="white">Home Team</font></td>
+<td width="23%"><font size="5" color="white">Teams</font></td>
+<td width="13%" align="center"><font size="5" color="white">Away Team</font></td>
+<td width="10%"><font size="5" color="white">Time(IST)</font></td>
+<td width="10%"><font size="5" color="white">Venue</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">Match 52</font></td>
+<td><font size="5" color="white">03 May 2019, Friday</font></td>
+<td align="center"><img src="static/kkr.png" style="width:30%"></td>
+<td><font size="5" color="white">Kolkata Vs Punjab</font></td>
+<td align="center"><img src="static/punj.png" style="width:35%"></td>
+<td><font size="5" color="white">8:00 pm</font></td>
+<td><font size="5" color="white">Kolkata</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">Match 53</font></td>
+<td><font size="5" color="white">04 May 2019, Saturday</font></td>
+<td align="center"><img src="static/delhi.png" style="width:40%"></td>
+<td><font size="5" color="white">Delhi Vs Rajasthan</font></td>
+<td align="center"><img src="static/rr.png" style="width:40%"></td>
+<td><font size="5" color="white">4:00 pm</font></td>
+<td><font size="5" color="white">Delhi</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">Match 54</font></td>
+<td><font size="5" color="white">04 May 2019, Saturday</font></td>
+<td align="center"><img src="static/rcb.png" style="width:40%"></td>
+<td><font size="5" color="white">Bangalore Vs Hyderabad</font></td>
+<td align="center"><img src="static/srh.png" style="width:40%"></td>
+<td><font size="5" color="white">8:00 pm</font></td>
+<td><font size="5" color="white">Bangalore</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">Match 55</font></td>
+<td><font size="5" color="white">05 May 2019, Sunday</font></td>
+<td align="center"><img src="static/punj.png" style="width:30%"></td>
+<td><font size="5" color="white">Punjab VS Chennai</font></td>
+<td align="center"><img src="static/csk.png" style="width:40%"></td>
+<td><font size="5" color="white">4:00 pm</font></td>
+<td><font size="5" color="white">Mohali</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">Match 56</font></td>
+<td><font size="5" color="white">05 May 2019, Sunday</font></td>
+<td align="center"><img src="static/mi.png" style="width:40%"></td>
+<td><font size="5" color="white">Mumbai Vs Kolkata</font></td>
+<td align="center"><img src="static/kkr.png" style="width:30%"></td>
+<td><font size="5" color="white">8:00 pm</font></td>
+<td><font size="5" color="white">Mumbai</font></td>
+</tr>
+
+</table>
+
+<br>
+<button class="button" type="submit" value="Submit"><a href="https://docs.google.com/spreadsheets/d/19YVpDpmsz9hGMEuw6_zQG0KdrnQ56rtOMrcSoDMtLhc/edit#gid=0">View Analysis</button>
+<br>
+
+</div>
+
+
+</div>
+</body>
+</html>

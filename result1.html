@@ -1,0 +1,68 @@
+
+<html>
+<head>
+
+<title>Result</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+
+
+img {
+  display: block;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+</style>
+</head>
+<body>
+
+<br>
+
+<center>
+<img src="static/logo_transparent101.png" style="width:15%">
+</center>
+<br>
+<div class="card text-center">
+  <div class="card-header">
+    Outcome Prediction
+  </div>
+  <div class="card-body" style="background-color:#4CAF50;">
+      <p>User Entered details <font size="5" color="white">{{ li }}</font></p>
+    <hr/>
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+  {{ name }}
+</div></p>
+
+  <p><font size="3" color="white">Result</font></p>
+  <hr>
+  <p>The system predicts winner team as&nbsp;&nbsp;<font size="5" color="white">{{ prediction }}</font></p>
+</div>
+<br>
+<br>
+</body>
+</html>
+

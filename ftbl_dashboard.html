@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>Football Dashboard</title>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+<style>
+body {
+  margin: 0;
+}
+
+ {
+  text-shadow:2px 2px red;
+}
+
+h1 {
+  text-shadow:3px 3px blue;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 8;
+  padding: 0;
+  width: 10%;
+  background-color: #4CAF50;
+  position: fixed;
+  height: 60%;
+
+}
+
+li a {
+  display: block;
+  color: #4CAF50;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+  background-height: 200px;
+}
+
+.button {
+  background-color: white;/* Green */
+  border: none;
+  color: #4CAF50;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+
+}
+
+.button2:hover {
+  box-shadow: 0 10px 10px 0 rgba(255,255,255,0.5);
+  color: black
+}
+
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td width="10%"><img src="static/logo_transparent101.png" style="width:100%"></td>
+<td><center><h1><font size="10" color="white">FOOTBALL&nbsp;&nbsp;</font><img src="static/f004.png" style="width:5%"></h1></center></td>
+</tr>
+</table>
+
+<ul>
+  <li align="center"><a class="active" href="http://127.0.0.1:5000/ftbl_dashboard"><font size="5" color="white" style="bold"><center>Dashboard</center></font></a></li>
+  <li><a href="http://127.0.0.1:5000/footballnews"><font size="5" color="white" style="bold"><center>News</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_ranking"><font size="5" color="white" style="bold"><center>Rankings</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_videos"><font size="5" color="white" style="bold" align="center"><center>Videos</center></a></ii>
+  <li><a href="http://127.0.0.1:5000/ftbl_schedule"><font size="5" color="white" style="bold"><center>Schedule</center></a></li>
+</ul>
+
+<right style="margin-left:10%">&nbsp;&nbsp;&nbsp;&nbsp;Upcoming Matches:</right>
+
+<div style="margin-left:10%;padding:1px 16px;width:85%;height:100px;">
+<table width="100%" height="530%">
+<tr>
+<td width="100%" height="5%" colspan="3" bgcolor="#4CAF50"><center><font size="5" color="white" style="bold">EPL 2018/2019-Match Day 37</font></center></td>
+</tr>
+<tr>
+<td width="25%" height="28%"><center><img src="static/bournemouth.png" style="width:25%"><br><font size="5" color="white" style="bold">Bournemouth</font></center></td>
+<td width="50%" height="28%">
+<center>
+<font size="5" color="white">Date: 4 May, 2019<br>Venue: Vitality stadium(Bournemouth)&nbsp;&nbsp;&nbsp;&nbsp;Time: 17:00<br>
+<button class="button button2"><a href="http://127.0.0.1:5000/ftb_pred">Predict Now!</a></button></font>
+</center>
+</td>
+<td width="25%" height="28%"><center><img src="static/tottenham.png" style="width:25%"><br><font size="5" color="white" style="bold">Tottenham</font></center></td>
+</tr>
+
+<tr>
+<td width="100%" height="5%" colspan="3" bgcolor="#4CAF50"><center><font size="5" color="white" style="bold">EPL 2018/2019-Match Day 37</font></center></td>
+</tr>
+<tr>
+<td width="20%" height="28%"><center><img src="static/everton.png" style="width:25%"><br><font size="5" color="white" style="bold">Everton</font></center></td>
+<td width="20%" height="28%"><center>
+<font size="5" color="white">Date: 4 May, 2019<br>Venue: Goodison Park, Liverpool&nbsp;&nbsp;&nbsp;&nbsp;Time: 00:30 <br>
+<button class="button button2"><a href="http://127.0.0.1:5000/ftb_pred">Predict Now!</a></button></font>
+</center>
+</td>
+<td width="40%" height="28%"><center><img src="static/burnley.png" style="width:30%"><br><font size="5" color="white" style="bold">Burnley</font></center></td>
+</tr>
+
+<tr>
+<td width="120%" height="5%" colspan="3"  bgcolor="#4CAF50"><center><font size="5" color="white" style="bold">EPL 2018/2019-Match Day 38</font></center></td>
+</tr>
+<tr>
+<td width="20%" height="28%"><center><img src="static/chelsea.png" style="width:25%"><br><font size="5" color="white" style="bold">Chelsea</font></center></td>
+<td width="20%" height="28%"><center>
+<font size="5" color="white">Date: 5 May, 2019<br>Venue: Stamford Bridge(Chelsea)&nbsp;&nbsp;&nbsp;&nbsp;Time: 18:30 <br>
+<button class="button button2"><a href="http://127.0.0.1:5000/ftb_pred">Predict Now!</a></button></font>
+</center>
+</td>
+<td width="40%" height="28%"><center><img src="static/watford.png" style="width:30%"><br><font size="5" color="white" style="bold">Watford</font></center></td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>

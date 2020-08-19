@@ -1,0 +1,553 @@
+<html>
+<head>
+<title>Football Predict Now</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<style>
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-shadow:3px 3px blue;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 8;
+  padding: 0;
+  width: 10%;
+  background-color: #4CAF50;
+  position: fixed;
+  height: 65%;
+
+}
+
+li a {
+  display: block;
+  color: #4CAF50;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+  background-height: 1000px
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td width="10%"><img src="static/logo_transparent101.png" style="width:100%"></td>
+<td><center><h1><font size="10" color="white">FOOTBALL&nbsp;&nbsp;</font><img src="static/f004.png" style="width:5%"></h1></center></td>
+</tr>
+</table>
+
+<ul>
+
+
+<li align="center"><a class="active" href="http://127.0.0.1:5000/ftbl_dashboard"><font size="5" color="white" style="bold"><center>Dashboard</center></font></a></li>
+  <li><a href="http://127.0.0.1:5000/footballnews"><font size="5" color="white" style="bold"><center>News</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_ranking"><font size="5" color="white" style="bold"><center>Rankings</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_videos"><font size="5" color="white" style="bold" align="center"><center>Videos</center></a></ii>
+  <li><a href="http://127.0.0.1:5000/ftbl_schedule"><font size="5" color="white" style="bold"><center>Schedule</center></a></li>
+
+
+
+</ul>
+<div style="margin-left: 13%;width:85%; height:275px;">
+<right>EPL Match Prediction:</right>
+<br><br>
+<form action="http://127.0.0.1:5000/predict" method="POST">
+<table width="100%" height="130%">
+<tr width="100%">
+<td align="right" width="20%">
+        <label for="teama" align="center"><font color="white" size="5">Team A</font></label>
+</td>
+<td align="left" width="30%">
+          <select id="teamA_val" name="TeamA">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="1">Man United</option>
+          <option value="2">Leicester</option>
+          <option value="3">Bournemouth</option>
+          <option value="4">Cardiff</option>
+          <option value="5">Fulham</option>
+          <option value="6">Crystal Palace</option>
+          <option value="7">Huddersfield</option>
+          <option value="9">Chelsea</option>
+          <option value="10">Newcastle</option>
+          <option value="11">Tottenham</option>
+          <option value="12">Watford</option>
+          <option value="13">Brighton</option>
+          <option value="14">Everton</option>
+          <option value="15">Arsenal</option>
+          <option value="16">Man City</option>
+          <option value="17">Liverpool</option>
+          <option value="18">West Ham</option>
+          <option value="19">Southampton</option>
+          <option value="20">Burnley</option>
+          <option value="21">West Brom</option>
+          <option value="22">Stoke</option>
+          <option value="23">Swansea</option>
+        </select>
+</td>
+
+<td align="right" width="20%">
+        <label for="teamb" align="center"><font color="white" size="5">Team B</font></label>
+</td>
+<td align="left" width="30%">
+          <select id="teamB_val" name="TeamB">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="1">Man United</option>
+          <option value="2">Leicester</option>
+          <option value="3">Bournemouth</option>
+          <option value="4">Cardiff</option>
+          <option value="5">Fulham</option>
+          <option value="6">Crystal Palace</option>
+          <option value="7">Huddersfield</option>
+          <option value="9">Chelsea</option>
+          <option value="10">Newcastle</option>
+          <option value="11">Tottenham</option>
+          <option value="12">Watford</option>
+          <option value="13">Brighton</option>
+          <option value="14">Everton</option>
+          <option value="15">Arsenal</option>
+          <option value="16">Man City</option>
+          <option value="17">Liverpool</option>
+          <option value="18">West Ham</option>
+          <option value="19">Southampton</option>
+          <option value="20">Burnley</option>
+          <option value="21">West Brom</option>
+          <option value="22">Stoke</option>
+          <option value="23">Swansea</option>
+        </select>
+</td>
+</tr>
+
+
+<tr>
+
+<td align="right" width="20%"><label for="Season" align="center"><font color="white" size="5">HAS</font></label></td>
+<td align="left" width="30%"><input type="text" name="has" placeholder="Enter value" id="has_val"></td>
+<td align="right" width="20%"><label for="Season" align="center"><font color="white" size="5">HDS</font></label></td>
+<td align="left" width="30%"><input type="text" name="hds" placeholder="Enter value" id="hds_val"></td>
+
+</tr>
+
+
+<tr>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal01" style="width:10% height:10%">View HAS values</button>
+
+  <div class="modal fade" id="myModal01">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Home Attack Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+            		Man United<br>
+          			Leicester<br>
+          			Bournemouth<br>
+          			Cardiff<br>
+          			Fulham<br>
+          			Crystal Palace<br>
+          			Huddersfield<br>
+          			Chelsea<br>
+          			Newcastle<br>
+          			Tottenham<br>
+         			Watford<br>
+          			Brighton<br>
+          			Everton<br>
+          			Arsenal<br>
+          			Man City<br>
+          			Liverpool<br>
+          			West Ham<br>
+          			Southampton<br>
+          			Burnley<br>
+          			
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  1.3580549010<br>
+                  0.3229968410<br>
+                  0.2569293050<br>
+                  0.0807492100<br>
+                  0.6288650620<br>
+                  0.2862926540<br>
+                  0.0513858610<br>
+                  1.3678426840<br>
+                  0.7487654040<br>
+                  1.1525114560<br>
+                  0.2618231970<br>
+                  0.0954308840<br>
+                  1.0693153000<br>
+                  1.3531610090<br>
+                  1.3874182500<br>
+                  1.2944343110<br>
+                  0.8148329403<br>
+                  0.4502380211<br>
+                  0.2324598478<br>
+               
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal02" style="width:10% height:10%">View HDS values</button>
+
+  <div class="modal fade" id="myModal02">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Home Defence Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  	Man United<br>
+          			Leicester<br>
+          			Bournemouth<br>
+          			Cardiff<br>
+          			Fulham<br>
+          			Crystal Palace<br>
+          			Huddersfield<br>
+          			Chelsea<br>
+          			Newcastle<br>
+          			Tottenham<br>
+         			Watford<br>
+          			Brighton<br>
+          			Everton<br>
+          			Arsenal<br>
+          			Man City<br>
+          			Liverpool<br>
+          			West Ham<br>
+          			Southampton<br>
+          			Burnley<br>
+          			
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  0.5988434774<br>
+                  0.3257445289<br>
+                  0.3619383655<br>
+                  0.1908402291<br>
+                  0.7863933577<br>
+                  0.4474874337<br>
+                  0.1447753462<br>
+                  0.6712311505<br>
+                  0.9147169600<br>
+                  0.8061354504<br>
+                  0.4014225508<br>
+                  0.1217429047<br>
+                  0.9081362624<br>
+                  0.6843925456<br>
+                  0.7304574285<br>
+                  0.6449083603<br>
+                  1.066073004<br>
+                  0.4836812702<br>
+                  0.3586480167<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+
+</tr>
+
+
+<tr>
+<td align="right" width="20%">   
+<label for="Season" align="center"><font class="abc" color="white" size="5">AAS</font></label>
+</td>
+<td align="left" width="30%">
+<input type="text" name="aas" placeholder="Enter value" id="aas_val">
+</td>
+<td align="right" width="20%">    
+<label for="Season" align="center"><font color="white" size="5">ADS</font></label>
+</td>
+<td align="left" width="30%">
+<input type="text" name="ads" placeholder="Enter value" id="ads_val">
+</td>
+</tr>
+
+
+
+<tr>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal03" style="width:10% height:10%">View AAS values</button>
+
+  <div class="modal fade" id="myModal03">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Away Attack Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  	Man United<br>
+          			Leicester<br>
+          			Bournemouth<br>
+          			Cardiff<br>
+          			Fulham<br>
+          			Crystal Palace<br>
+          			Huddersfield<br>
+          			Chelsea<br>
+          			Newcastle<br>
+          			Tottenham<br>
+         			Watford<br>
+          			Brighton<br>
+          			Everton<br>
+          			Arsenal<br>
+          			Man City<br>
+          			Liverpool<br>
+          			West Ham<br>
+          			Southampton<br>
+          			Burnley<br>
+          			
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  1.41484997400<br>
+                  0.37839010940<br>
+                  0.24019546070<br>
+                  0.05922627799<br>
+                  0.50342336290<br>
+                  0.39484185320<br>
+                  0.06580697554<br>
+                  1.35562369600<br>
+                  0.67781184810<br>
+                  1.29639741800<br>
+                  0.25664720460<br>
+                  0.06580697554<br>
+                  0.93116870390<br>
+                  1.39510788100<br>
+                  1.32930090600<br>
+                  1.31284916200<br>
+                  0.81271614790<br>
+                  0.44419708490<br>
+                  0.24019546070<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+<td align="right" width="20%"></td>
+<td align="left" width="30%">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal04" style="width:10% height:10%">View ADS values</button>
+
+  <div class="modal fade" id="myModal04">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Away Defence Strength</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" align="center">
+          <table align="center" width="75%">
+            <tr>
+              <td align="left">
+                  	Man United<br>
+          			Leicester<br>
+          			Bournemouth<br>
+          			Cardiff<br>
+          			Fulham<br>
+          			Crystal Palace<br>
+          			Huddersfield<br>
+          			Chelsea<br>
+          			Newcastle<br>
+          			Tottenham<br>
+         			  Watford<br>
+          			Brighton<br>
+          			Everton<br>
+          			Arsenal<br>
+          			Man City<br>
+          			Liverpool<br>
+          			West Ham<br>
+          			Southampton<br>
+          			Burnley<br>
+          			
+              </td>
+              <td>
+                  <br><br> <br><br><br><br><br><br>
+              </td>
+              <td>
+                  0.6631223028<br>
+                  0.3523601904<br>
+                  0.3107621124<br>
+                  0.1468167460<br>
+                  0.7561062419<br>
+                  0.4012991058<br>
+                  0.1321350714<br>
+                  0.5970547671<br>
+                  0.9200516083<br>
+                  0.8588779641<br>
+                  0.3694888108<br>
+                  0.1199003426<br>
+                  0.8123859946<br>
+                  0.8221737776<br>
+                  0.7658940250<br>
+                  0.7683409708<br>
+                  0.9518619033<br>
+                  0.4331094007<br>
+                  0.3988521600<br>
+              </td>
+            </tr>
+          </table>  
+        </div>
+        <div class="modal-footer" align="center">
+          Kindly enter the correct values.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</td>
+
+</td>
+
+
+</tr>
+
+
+<td align="center" height="20%" colspan="4">
+<center>
+        <label for="algorithm" align="center"><font color="white" size="5">Algorithm</font></label>
+
+          <select id="algo" name="algo" width="50%">
+          <option value="" selected disabled hidden>Choose here</option>
+     
+          <option value="2">RandomForest</option>
+
+          <option value="1">KNN</option>  
+          </select>
+</center>
+</td>
+
+
+<tr>
+
+</tr>
+
+</table>
+
+<br> 
+      
+      <input type="submit" name="Predict" class="btn btn-primary">
+      </form>
+    
+<br>
+
+</form>
+<font size="3" color="white" style="bold" face="Arial Black">HAS: Home Attack Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDS: Home Defence Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAS: Away Attack Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADS: Away Defence Strength&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</body>
+</html>

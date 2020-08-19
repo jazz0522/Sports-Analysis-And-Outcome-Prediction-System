@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>Football Schedule</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta charset="utf 8">
+<link rel="StyleSheet" href="style.css">
+<link rel="Shortcut icon" href="static/logoblack.png">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+<style>
+
+.button {
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+body {
+  margin: 0;
+}
+
+
+h1 {
+  text-shadow:3px 3px blue;
+}
+
+body {
+  background-image: url("static/mpic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 230%;
+   background-position: center;
+  background-repeat: no-repeat;
+  background-height: 1000px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 8;
+  padding: 0;
+  width: 10%;
+  background-color: #4CAF50;
+  position: fixed;
+  height: 63%;
+
+}
+
+li a {
+  display: block;
+  color: #4CAF50;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td width="10%"><img src="static/logo_transparent101.png" style="width:100%"></td>
+<td><center><h1><font size="10" color="white">FOOTBALL&nbsp;&nbsp;</font><img src="static/f004.png" style="width:5%"></h1></center></td>
+</tr>
+</table>
+
+<ul>
+
+<li align="center"><a class="active" href="http://127.0.0.1:5000/ftbl_dashboard"><font size="5" color="white" style="bold"><center>Dashboard</center></font></a></li>
+  <li><a href="http://127.0.0.1:5000/footballnews"><font size="5" color="white" style="bold"><center>News</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_ranking"><font size="5" color="white" style="bold"><center>Rankings</center></a></li>
+  <li><a href="http://127.0.0.1:5000/ftbl_videos"><font size="5" color="white" style="bold" align="center"><center>Videos</center></a></ii>
+  <li><a href="http://127.0.0.1:5000/ftbl_schedule"><font size="5" color="white" style="bold"><center>Schedule</center></a></li>
+
+</ul>
+
+<right style="margin-left:10%">&nbsp;&nbsp;&nbsp;&nbsp;Schedule: Remaining Matches</right>
+<div style="margin-left:10%;padding:1px 16px;width:85%;height:300px;">
+<br>
+<table width="100%" height="80%" border="1">
+<tr>
+<td width="25%"><font size="5" color="white">Date, Day</font></td>
+<td width="15%"><font size="5" color="white">Home Team</font></td>
+<td width="35%"><font size="5" color="white">Teams</font></td>
+<td width="10%"><font size="5" color="white">Away Team</font></td>
+<td width="15%"><font size="5" color="white">Time(IST)</font></td>
+<td width="10%"><font size="5" color="white">Venue</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">4 May 2019, Saturday</font></td>
+<td><img src="static/everton.png" style="width:30%"></td>
+<td><font size="5" color="white">Everton Vs Burnley</font></td>
+<td><img src="static/burnley.png" style="width:35%"></td>
+<td><font size="5" color="white">00:30 </font></td>
+<td><font size="5" color="white">Liverpool</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">4 May 2019, Saturday</font></td>
+<td><img src="static/westham.png" style="width:30%"></td>
+<td><font size="5" color="white">West Ham Vs Southampton</font></td>
+<td><img src="static/southampton.png" style="width:35%"></td>
+<td><font size="5" color="white">19:30 </font></td>
+<td><font size="5" color="white">London</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">5 May 2019, Sunday</font></td>
+<td><img src="static/newcastle.png" style="width:30%"></td>
+<td><font size="5" color="white">NewCastle Vs Liverpool</font></td>
+<td><img src="static/liverpool.png" style="width:35%"></td>
+<td><font size="5" color="white">00:15 </font></td>
+<td><font size="5" color="white">NewCastle</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">5 May 2019, Sunday</font></td>
+<td><img src="static/arsenal.png" style="width:30%"></td>
+<td><font size="5" color="white">Arsenal Vs Brighton</font></td>
+<td><img src="static/brighton.png" style="width:35%"></td>
+<td><font size="5" color="white">21:00 </font></td>
+<td><font size="5" color="white">London</font></td>
+</tr>
+
+<tr>
+<td><font size="5" color="white">7 May 2019, Tuesday</font></td>
+<td><img src="static/mancity.png" style="width:30%"></td>
+<td><font size="5" color="white">Man City Vs Leicester</font></td>
+<td><img src="static/leicester.png" style="width:35%"></td>
+<td><font size="5" color="white">00:30 pm</font></td>
+<td><font size="5" color="white">Manchester</font></td>
+</tr>
+
+</table>
+<br>
+<button class="button" type="submit" value="Submit"><a href="https://docs.google.com/spreadsheets/d/1BoI2SXeMRMi9yUdt-5dEu2vjrQYbg8eWxEHDPV2H-cY/edit?ts=5cc73851#gid=0">View Analysis</button>
+<br>
+
+</div>
+
+
+</div>
+</body>
+</html>
